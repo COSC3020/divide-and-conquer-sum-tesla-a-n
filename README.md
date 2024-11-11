@@ -28,6 +28,15 @@ most important part. Add your answer to this markdown file.
 
 Let T(n) be the time complexity for sorting an array of size n.
 The algorithm Divides, Conquers, and then Combines the array(s)
+The combining of elements or merging of elements happens recursively by adding the results
+at each recursive level.
+     If the array is empty, it returns 0 because there are no elements to sum,
+     if the array has one element, it returns that element as the sum
+     if the array has two elements, it returns the sum of those two integers as a basecase
+     to avoid further splitting.
+     After the subarrays are divided, each element is merged with what is left in the 
+     left, mid, or right subarray, accumulating the sum until the origional array's sum
+     is calculated at the top level.
 Divide splits the array into 3 sub-arrays which would each be about n/3 (constant time)
 Conquer recursively sorts the three sub-arrays so 3*T(n/3)
 Combine takes O(n) time because we are merging n elements
